@@ -29,12 +29,12 @@ public class TesteContaCorrente
                     ContaCorrente cont = new ContaCorrente();
                     cont.setIdConta(c++);
                     cont.setSaldo(0);
-                    cont.setLimEspecial(2000);
+                    cont.setLimEspecial(2000);      //Todos clientes tem 
                     System.out.println("\nNome completo: ");
                     cont.setNome(s.nextLine());
                     System.out.println("Id da sua conta corrente: "+ cont.getIdConta());
-                    System.out.println("Saldo: "+ cont.getSaldo());
-                    System.out.println("Limite Especial: "+ cont.getLimEspecial());
+                    System.out.println("Saldo: R$"+ cont.getSaldo());
+                    System.out.println("Limite Especial: R$"+ cont.getLimEspecial());
                     clientes.add(cont);
                     break;
                 case 2:
@@ -95,8 +95,8 @@ public class TesteContaCorrente
         {
             if(contaa.getIdConta() == t)
             {
-                System.out.println("\nSaldo: "+ contaa.getSaldo());
-                System.out.println("\nLimite Especial: " + contaa.getLimEspecial());
+                System.out.println("\nSaldo: R$"+ contaa.getSaldo());
+                System.out.println("\nLimite Especial: R$" + contaa.getLimEspecial());
                 return;
             }
         }
@@ -174,7 +174,6 @@ public class TesteContaCorrente
             a = 2;      //Não permetido
         else if((c.getSaldo() - valor + c.getLimEspecial())>=0)
             a = 3;      //Utiliza o Limite Especial
-        System.out.println(a);
         return a;
     }
 
